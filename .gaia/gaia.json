@@ -8,7 +8,6 @@
     "maxFilesToTouch": 6,
     "requireTests": true,
     "targetBranch": "develop",
-
     "architecture": "mvvm_coordinator",
 
     "patterns": {
@@ -30,32 +29,9 @@
       "protocols":  "UpperCamelCase — suffix with -able, -ing, or -Protocol"
     },
 
-    "codeRules": [
-      "Use Swift concurrency (async/await) — no completion handler callbacks for new code",
-      "UI layer must be UIKit — do NOT introduce SwiftUI unless the feature spec explicitly requires it",
-      "ViewModels must be final classes conforming to a protocol — enables mockability",
-      "All dependencies must be injected via initializer — no singletons or service locators",
-      "Use Result<Success, Failure> for repository return types",
-      "No force unwraps (!) allowed — use guard let or if let",
-      "Access control: mark everything private/internal unless public API is needed",
-      "Coordinator pattern required: ViewControllers must not push/present directly",
-      "All strings must be localized via Localizable.strings — no hardcoded user-facing strings"
-    ],
-
-    "testRules": [
-      "Every new ViewController must have a corresponding XCTestCase in Tests/",
-      "Every new ViewModel must have unit tests covering all public methods",
-      "Test file naming: {TypeName}Tests.swift",
-      "Use XCTest only — no third-party test frameworks",
-      "Use protocol mocks for all dependencies — inject via init",
-      "Tests must cover: success response, failure/error response, and empty data",
-      "Async tests must use async/await with XCTestExpectation or async test methods"
-    ],
-
     "forbidden": [
-      "Sources/DemoApp/AppDelegate.swift — do not modify app entry point",
-      "Package.swift — do not add dependencies without explicit task",
-      "Do not introduce Combine unless the feature spec explicitly requires it"
+      "Sources/DemoApp/AppDelegate.swift",
+      "Package.swift"
     ]
   }
 }
