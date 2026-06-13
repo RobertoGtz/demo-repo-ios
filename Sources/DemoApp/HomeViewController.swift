@@ -9,3 +9,6 @@ public class HomeViewController {
         print("Home screen loaded")
     }
 }
+
+
+// MARK: - PromoBanner Integration
