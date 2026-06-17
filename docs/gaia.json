@@ -1,0 +1,37 @@
+{
+  "name": "demo-repo-ios",
+  "platform": "ios",
+  "version": "1.0.0",
+  "description": "Gaia plugin config for the iOS/Swift demo repo",
+
+  "config": {
+    "maxFilesToTouch": 6,
+    "requireTests": true,
+    "targetBranch": "develop",
+    "architecture": "mvvm_coordinator",
+
+    "patterns": {
+      "viewController": "Sources/DemoApp/Presentation/Screens/{Name}ViewController.swift",
+      "viewModel":      "Sources/DemoApp/Presentation/ViewModels/{Name}ViewModel.swift",
+      "view":           "Sources/DemoApp/Presentation/Views/{Name}View.swift",
+      "model":          "Sources/DemoApp/Domain/Models/{Name}.swift",
+      "repository":     "Sources/DemoApp/Data/Repositories/{Name}Repository.swift",
+      "service":        "Sources/DemoApp/Data/Services/{Name}Service.swift",
+      "coordinator":    "Sources/DemoApp/Presentation/Coordinators/{Name}Coordinator.swift",
+      "test":           "Tests/DemoAppTests/{Feature}/{Name}Tests.swift"
+    },
+
+    "naming": {
+      "types":      "UpperCamelCase",
+      "files":      "UpperCamelCase",
+      "variables":  "lowerCamelCase",
+      "constants":  "lowerCamelCase with let",
+      "protocols":  "UpperCamelCase — suffix with -able, -ing, or -Protocol"
+    },
+
+    "forbidden": [
+      "Sources/DemoApp/AppDelegate.swift",
+      "Package.swift"
+    ]
+  }
+}
